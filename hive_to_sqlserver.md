@@ -1,9 +1,9 @@
 # 先清空表在抽
 ```shell
 #!/bin/bash
-export Azure_DB="jdbc:sqlserver://sql01cndev19909.database.chinacloudapi.cn:1433;database=sqldbeng01cndev19909;"
-export user_name=dldeveng
-export pwd='deveng@2020'
+export Azure_DB="jdbc:sqlserver://abc.database.chinacloudapi.cn:1433;database=abc;"
+export user_name=abc
+export pwd='abc'
 
 # city dimension
 sqoop eval \
@@ -27,9 +27,9 @@ sqoop export --connect $Azure_DB \
 
 ```shell
 #!/bin/bash
-export Azure_DB="jdbc:sqlserver://sql01cndev19909.database.chinacloudapi.cn:1433;database=sqldbeng01cndev19909;"
-export user_name=dldeveng
-export pwd='deveng@2020'
+export Azure_DB="jdbc:sqlserver://abc.database.chinacloudapi.cn:1433;database=abc;"
+export user_name=abc
+export pwd='abc'
 
 business_dt=$1
 
