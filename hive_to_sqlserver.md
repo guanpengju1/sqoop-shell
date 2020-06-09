@@ -10,14 +10,14 @@ sqoop eval \
 --connect $Azure_DB \
 --username $user_name \
 --password $pwd \
---query "truncate table [dbo].[rca_user_desc_city_report]"
+--query "truncate table [dbo].[table_name]"
 
 sqoop export --connect $Azure_DB \
 --username $user_name \
 --password $pwd \
---table rca_user_desc_city_report \
---hcatalog-database rca_rpt \
---hcatalog-table rca_user_desc_city_report \
+--table table_name \
+--hcatalog-database database \
+--hcatalog-table table_name \
 --num-mappers 5 \
 -- \
 --schema dbo \
@@ -37,14 +37,14 @@ sqoop eval \
 --connect $Azure_DB \
 --username $user_name \
 --password $pwd \
---query "delete from [dbo].[rca_user_desc_report] where rca_report_date=$business_dt"
+--query "delete from [dbo].[table_name] where rca_report_date=$business_dt"
 
 sqoop export --connect $Azure_DB \
 --username $user_name \
 --password $pwd \
---table rca_user_desc_report \
---hcatalog-database rca_rpt \
---hcatalog-table rca_user_desc_report \
+--table table_name \
+--hcatalog-database database \
+--hcatalog-table table_name \
 --hcatalog-partition-keys rca_report_date \
 --hcatalog-partition-values $business_dt \
 --num-mappers 5 \
