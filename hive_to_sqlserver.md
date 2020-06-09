@@ -1,4 +1,5 @@
 # 先清空表在抽
+```shell
 #!/bin/bash
 export Azure_DB="jdbc:sqlserver://sql01cndev19909.database.chinacloudapi.cn:1433;database=sqldbeng01cndev19909;"
 export user_name=dldeveng
@@ -21,9 +22,10 @@ sqoop export --connect $Azure_DB \
 -- \
 --schema dbo \
 --direct
-
+```
 # sqoop分区抽入sqlserver
 
+```shell
 #!/bin/bash
 export Azure_DB="jdbc:sqlserver://sql01cndev19909.database.chinacloudapi.cn:1433;database=sqldbeng01cndev19909;"
 export user_name=dldeveng
@@ -49,3 +51,4 @@ sqoop export --connect $Azure_DB \
 -- \
 --schema dbo \
 --direct
+```
